@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Haven Bakeshop - Inquiry Form</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(
+                to right,
+                #ffdab9 0%, #ffdab9 25%,
+                #fbc4ab 25%, #fbc4ab 50%,
+                #f8ad9d 50%, #f8ad9d 75%,
+                #f4978e 75%, #f4978e 100%
+            );
+            min-height: 100vh;
+        }
+
+        #header {
+            font-family: 'Brush Script MT', cursive;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffe7b2;
+            font-size: 75px;
+            height: 150px;
+            line-height: 1.1;
+            margin: 0;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #000000;
+        }
+
+        #logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .header-text {
+            margin-left: auto;
+            text-align: right;
+            padding-left: 20px;
+            color: #000000;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            max-width: 800px;
+            margin: 40px auto;
+            color: #000000;
+        }
+
+        .font-title {
+            font-family: 'Playfair Display', serif;
+            color: #000000;
+        }
+.navbar {
+  background-color: #ffe7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 0;
+  border-top: 2px solid rgba(93, 64, 55, 0.15);
+  border-bottom: 2px solid rgba(93, 64, 55, 0.15);
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Individual Button Links */
+.nav-link {
+  text-decoration: none;
+  color: #5d4037;
+  background-color: #f4978e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #f06d63;
+  color: #fff8f0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+	</style>
+</head>
+
+<body>
+<h1 id="header">
+  <img id="logo" src="https://i.ibb.co/PdPQDW9/bakeshop-removebg-preview.png" alt="logo"/>
+  <span class="header-text">Sweet Haven Bakeshop</span>
+  <nav class="navbar">
+  <a href="C:\Users\USER\Downloads\Homepage.html" class="nav-link">🏠 Home</a>
+  <a href="C:\Users\USER\Downloads\Gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="C:\Users\USER\Downloads\Inquiry form.html" class="nav-link">📋 Inquiry Form</a>
+  <a href="C:\Users\USER\Downloads\Registration.html" class="nav-link">🧾 Registration</a>
+  <a href="C:\Users\USER\Downloads\Orders.html" class="nav-link">🛒 Order Now</a>
+</nav>
+</h1>
+
+    <!-- Inquiry Form Section -->
+    <div class="form-container">
+        <h1 class="font-title text-4xl md:text-5xl font-bold text-black text-center mb-10">
+            Inquiry Form
+        </h1>
+
+        <form action="/submit_form" method="POST" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Name Fields -->
+                <div>
+                    <label for="first_name" class="block text-sm font-medium text-black mb-1">First Name</label>
+                    <input type="text" id="first_name" placeholder="First" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="last_name" class="block text-sm font-medium text-black mb-1">Last Name</label>
+                    <input type="text" id="last_name" placeholder="Last" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <label for="contact_number" class="block text-sm font-medium text-black mb-1">Contact Number<span class="text-red-500">*</span></label>
+                    <input type="tel" id="contact_number" placeholder="### #### ####" required class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-black mb-1">Email<span class="text-red-500">*</span></label>
+                    <input type="email" id="email" placeholder="you@example.com" required class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <!-- Event Date -->
+                <div class="md:col-span-2">
+                    <label for="event_date" class="block text-sm font-medium text-black mb-1">Event Date<span class="text-red-500">*</span></label>
+                    <input type="date" id="event_date" required class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <!-- Address -->
+                <h2 class="text-lg font-semibold text-black md:col-span-2 mt-4">Delivery Address <span class="text-sm text-black">(If Applicable)</span></h2>
+
+                <div class="md:col-span-2">
+                    <label for="street_address" class="block text-sm font-medium text-black mb-1">Street Address</label>
+                    <input type="text" id="street_address" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="street_address_2" class="block text-sm font-medium text-black mb-1">Street Address Line 2</label>
+                    <input type="text" id="street_address_2" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="city" class="block text-sm font-medium text-black mb-1">City</label>
+                    <input type="text" id="city" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="region" class="block text-sm font-medium text-black mb-1">Region</label>
+                    <input type="text" id="region" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="postal_code" class="block text-sm font-medium text-black mb-1">Postal / Zip Code</label>
+                    <input type="text" id="postal_code" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="country" class="block text-sm font-medium text-black mb-1">Country</label>
+                    <select id="country" class="w-full px-4 py-3 bg-rose-50 border border-black text-black rounded-lg focus:ring-black focus:border-black">
+                        <option>Select your country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>Philippines</option>
+                        <option>United Kingdom</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-6">
+                <button type="submit" class="w-full bg-black text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50 transition-all duration-300 ease-in-out text-lg">
+                    Submit Inquiry
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
