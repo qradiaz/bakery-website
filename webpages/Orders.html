@@ -1,0 +1,493 @@
+<html>
+
+<head>
+    <title>Sweet Haven Bakeshop</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right,
+      #ffdab9 0%, #ffdab9 25%,
+      #fbc4ab 25%, #fbc4ab 50%,
+      #f8ad9d 50%, #f8ad9d 75%,
+      #f4978e 75%, #f4978e 100%);
+  min-height: 100vh;
+  color: #3e2723;
+}
+
+/* HEADER */
+#header {
+  font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffe7b2;
+  font-size: 72px;
+  height: 150px;
+  padding: 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-bottom: 4px solid rgba(244, 151, 142, 0.4);
+}
+
+#logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.header-text {
+  margin-left: auto;
+  text-align: right;
+  padding-left: 30px;
+  color: #5d4037;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* MENU TITLE */
+.menu-title {
+  text-align: center;
+  font-size: 48px;
+  color: #4e342e;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* TRANSLUCENT BOX */
+.translucent-box {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 40px 50px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin: 20px auto 40px auto;
+  max-width: 900px;
+}
+
+.translucent-box table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.translucent-box table td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.translucent-box table img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* CART SECTION */
+.cart {
+  margin: 30px auto;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cart h3 {
+  font-size: 26px;
+  color: #4e342e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cart-items {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-items th, .cart-items td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.qty {
+  width: 55px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.grand {
+  font-weight: 700;
+  font-size: 1.2em;
+  text-align: right;
+  color: #3e2723;
+}
+
+/* BUTTONS */
+.button {
+  padding: 10px 18px;
+  background: #f4978e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background: #f06d63;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button.secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.button.secondary:hover {
+  background: #d5d5d5;
+}
+
+/* FORM */
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #4e342e;
+}
+
+form input, form select {
+  width: 98%;
+  padding: 9px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #c9b1ae;
+  font-size: 1em;
+  transition: border-color 0.25s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: #f4978e;
+  outline: none;
+  box-shadow: 0 0 5px rgba(244, 151, 142, 0.5);
+}
+
+form .form-row {
+  margin-bottom: 15px;
+}
+
+.validation-error {
+  color: #b50000;
+  font-size: 0.95em;
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  #header { font-size: 56px; height: 120px; padding: 0 15px; }
+  .menu-title { font-size: 36px; }
+  .translucent-box, .cart { padding: 20px; }
+}
+.navbar {
+  background-color: #ffe7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 0;
+  border-top: 2px solid rgba(93, 64, 55, 0.15);
+  border-bottom: 2px solid rgba(93, 64, 55, 0.15);
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Individual Button Links */
+.nav-link {
+  text-decoration: none;
+  color: #5d4037;
+  background-color: #f4978e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #f06d63;
+  color: #fff8f0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+	</style>
+</head>
+
+<body>
+<h1 id="header">
+  <img id="logo" src="https://i.ibb.co/PdPQDW9/bakeshop-removebg-preview.png" alt="logo"/>
+  <span class="header-text">Sweet Haven Bakeshop</span>
+  <nav class="navbar">
+  <a href="C:\Users\USER\Downloads\Homepage.html" class="nav-link">🏠 Home</a>
+  <a href="C:\Users\USER\Downloads\Gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="C:\Users\USER\Downloads\Inquiry form.html" class="nav-link">📋 Inquiry Form</a>
+  <a href="C:\Users\USER\Downloads\Registration.html" class="nav-link">🧾 Registration</a>
+  <a href="C:\Users\USER\Downloads\Orders.html" class="nav-link">🛒 Order Now</a>
+</nav>
+</h1>
+
+    <p class="menu-title">Sweet Haven Menu</p>
+
+    <div class="translucent-box">
+        <!-- Removed image grid; items will render from JS data -->
+        <form id="orderForm" style="margin-top:18px;">
+            <h3>Add Items to Cart</h3>
+            <div id="selectionList"></div>
+            <button type="button" class="button" onclick="addSelectedItems()">Add Selected to Cart</button>
+        </form>
+    </div>
+
+    <div class="cart" aria-label="Cart">
+        <h3>Your Cart</h3>
+        <table class="cart-items" id="cartTable" aria-label="Cart contents">
+            <thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Subtotal</th><th>Remove</th></tr></thead>
+            <tbody id="cartBody"></tbody>
+        </table>
+        <p class="grand" id="cartTotal">Total: ₱0.00</p>
+        <button class="button secondary" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <div class="cart" aria-label="Checkout">
+        <h3>Checkout</h3>
+        <form id="checkoutForm" autocomplete="off">
+            <div class="form-row">
+                <label for="customerName">Full Name</label>
+                <input type="text" id="customerName" name="customerName" required minlength="2"/>
+                <div class="validation-error" id="nameErr"></div>
+            </div>
+            <div class="form-row">
+                <label for="contact">Contact (Phone or Email)</label>
+                <input type="text" id="contact" name="contact" required/>
+                <div class="validation-error" id="contactErr"></div>
+            </div>
+            <div class="form-row">
+                <label for="delivery">Delivery or Pickup</label>
+                <select id="delivery" name="delivery" required>
+                    <option value="">-- Select --</option>
+                    <option value="Pickup">Pickup</option>
+                    <option value="Delivery">Delivery</option>
+                </select>
+                <div class="validation-error" id="deliveryErr"></div>
+            </div>
+            <div class="form-row" id="addressRow" style="display:none;">
+                <label for="address">Delivery Address</label>
+                <input type="text" id="address" name="address"/>
+                <div class="validation-error" id="addressErr"></div>
+            </div>
+            <div class="form-row">
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="">-- Choose --</option>
+                    <option value="Cash on Delivery">Cash on Delivery</option>
+                    <option value="GCash">GCash</option>
+                </select>
+                <div class="validation-error" id="paymentErr"></div>
+            </div>
+            <button class="button" type="submit">Place Order</button>
+            <div id="orderStatus" style="margin:9px 0 0 0;"></div>
+        </form>
+    </div>
+
+<script>
+const menuItems = [
+    {name: "Pandesal", price: 25.00},
+    {name: "Monay", price: 25.00},
+    {name: "Spanish Bread", price: 40.00},
+    {name: "Ensaymada", price: 60.00},
+    {name: "Pandecoco", price: 70.00},
+    {name: "Cinnamon Roll", price: 65.00},
+    {name: "Crinkles", price: 55.00},
+    {name: "Chocolate Chip Cookies", price: 50.00},
+    {name: "Butter Croissant", price: 70.00},
+    {name: "Matcha Cookies", price: 60.00},
+    // Existing items can be retained below if desired
+    {name: "Tiramisu Cake", price: 899.00},
+    {name: "Black Forest Cake", price: 799.00},
+    {name: "Ube Cake", price: 699.00},
+    {name: "Red Velvet Cake", price: 899.00},
+    {name: "Chocolate Cake", price: 599.00},
+    {name: "Yema Cake", price: 699.00},
+    {name: "Biscoff Cheesecake", price: 899.00},
+    {name: "Mocha Delight Cupcake", price: 250.00},
+    {name: "Pink Puff Cupcake", price: 320.00},
+    {name: "Salted Caramel Cupcake", price: 250.00}
+];
+
+const cart = [];
+
+// Render selection inputs (qty per item)
+function renderSelection() {
+    const list = document.getElementById('selectionList');
+    list.innerHTML = '';
+    menuItems.forEach((item, idx) => {
+        list.innerHTML += `
+        <div>
+            <label>
+                <input type="number" id="sel${idx}" min="0" max="99" value="0" class="qty" style="width:60px;" /> 
+                ${item.name} — ${formatPeso(item.price)}
+            </label>
+        </div>`;
+    });
+}
+renderSelection();
+
+function addSelectedItems() {
+    menuItems.forEach((item, idx) => {
+        const val = document.getElementById('sel'+idx).value;
+        const qty = parseInt(val || "0", 10);
+        if (qty > 0) {
+            addToCart(item.name, item.price, qty);
+            document.getElementById('sel'+idx).value = "0";
+        }
+    });
+}
+
+function refreshCart() {
+    const body = document.getElementById('cartBody');
+    body.innerHTML = '';
+    let total = 0;
+    cart.forEach((item, idx) => {
+        const sub = item.qty * item.price;
+        total += sub;
+        body.innerHTML += `<tr>
+            <td>${item.name}</td>
+            <td><input class="qty" type="number" min="1" value="${item.qty}" onchange="updateQty(${idx}, this.value)" /></td>
+            <td>${formatPeso(item.price)}</td>
+            <td>${formatPeso(sub)}</td>
+            <td><button class="button secondary" onclick="removeItem(${idx})">Remove</button></td>
+        </tr>`;
+    });
+    document.getElementById('cartTotal').textContent = 'Total: ' + formatPeso(total);
+}
+function formatPeso(n) {
+    return '₱' + Number(n).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+function addToCart(name, price, qty) {
+    const i = cart.findIndex(c => c.name === name);
+    if (i >= 0) cart[i].qty += qty;
+    else cart.push({ name, price, qty });
+    refreshCart();
+}
+function updateQty(index, val) {
+    const qty = Math.max(1, parseInt(val)||1);
+    cart[index].qty = qty;
+    refreshCart();
+}
+function removeItem(idx) {
+    cart.splice(idx, 1);
+    refreshCart();
+}
+function clearCart() {
+    cart.length = 0;
+    refreshCart();
+}
+
+// Delivery address field toggle
+document.getElementById('delivery').addEventListener('change', function() {
+    if (this.value == 'Delivery') {
+        document.getElementById('addressRow').style.display = 'block';
+        document.getElementById('address').setAttribute('required','required');
+    } else {
+        document.getElementById('addressRow').style.display = 'none';
+        document.getElementById('address').removeAttribute('required');
+    }
+});
+
+// Checkout validation and submission
+document.getElementById('checkoutForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    // reset errors
+    ['nameErr','contactErr','deliveryErr','addressErr','paymentErr'].forEach(id => {
+        document.getElementById(id).textContent = '';
+    });
+    let hasErr = false;
+
+    if (!document.getElementById('customerName').value.trim()) {
+        document.getElementById('nameErr').textContent = 'Full Name is required.'; hasErr = true;
+    }
+    if (!document.getElementById('contact').value.trim()) {
+        document.getElementById('contactErr').textContent = 'Contact info required.'; hasErr = true;
+    }
+    if (!document.getElementById('delivery').value) {
+        document.getElementById('deliveryErr').textContent = 'Choose delivery or pickup.'; hasErr = true;
+    }
+    if (document.getElementById('delivery').value === 'Delivery' && !document.getElementById('address').value.trim()) {
+        document.getElementById('addressErr').textContent = 'Delivery address required.'; hasErr = true;
+    }
+    if (!document.getElementById('payment').value) {
+        document.getElementById('paymentErr').textContent = 'Choose payment.'; hasErr = true;
+    }
+    if (cart.length === 0) {
+        document.getElementById('orderStatus').textContent = 'Add items to cart.';
+        hasErr = true;
+    }
+    if (hasErr) return;
+
+    // Build payload
+    const order = {
+        customer: document.getElementById('customerName').value.trim(),
+        contact: document.getElementById('contact').value.trim(),
+        delivery: document.getElementById('delivery').value,
+        address: document.getElementById('delivery').value === 'Delivery'
+                 ? document.getElementById('address').value.trim() : "",
+        payment: document.getElementById('payment').value,
+        cart: cart.map(it => ({ name: it.name, qty: it.qty, price: it.price })),
+        total: cart.reduce((sum, it) => sum + it.price * it.qty, 0)
+    };
+
+    // Send to backend REST API
+    // Replace with your real endpoint
+    fetch('https://your-api-endpoint/orders', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(order)
+    })
+    .then(res => res.ok ? res.json() : Promise.reject(res))
+    .then(data => {
+        document.getElementById('orderStatus').textContent = 'Order placed successfully! Reference: ' + (data.orderId || data.id || 'N/A');
+        clearCart();
+        document.getElementById('checkoutForm').reset();
+        document.getElementById('addressRow').style.display = 'none';
+    })
+    .catch(err => {
+        document.getElementById('orderStatus').textContent = 'There was a problem submitting your order. Please try again.';
+    });
+});
+</script>
+</body>
+</html>

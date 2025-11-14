@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Haven Bakeshop - Registration</title>
+
+    <style>
+        /* Load Inter font for better overall presentation if needed, but not strictly necessary for Brush Script */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+
+            /* 4-COLOR BACKGROUND: Using your provided pastel gradient */
+            background: linear-gradient(
+                to right,
+                #ffdab9 0%, #ffdab9 25%, /* Pale Peach */
+                #fbc4ab 25%, #fbc4ab 50%, /* Lighter Coral */
+                #f8ad9d 50%, #f8ad9d 75%, /* Medium Coral */
+                #f4978e 75%, #f4978e 100% /* Darker Coral */
+            );
+            min-height: 100vh;
+        }
+        
+        #header {
+            /* --- FONT: Brush Script MT --- */
+            font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+            /* ------------------------ */
+
+            /* Modern layout using Flexbox for perfect alignment */
+            display: flex;
+            align-items: center; /* Vertically centers the logo and text */
+            justify-content: space-between; /* Pushes logo left, text right */
+            
+            background: #ffe7b2; /* Keeping the pale yellow background for the banner */
+            
+            /* Adjusted font-size to ensure it fits the height */
+            font-size: 75px; 
+            height: 150px;
+            line-height: 1.1; /* Adjust line-height to prevent clipping */
+            margin: 0;
+            padding: 0 20px; /* Padding on the sides */
+            width: 100%;
+            box-sizing: border-box; /* Include padding in the height */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        #logo {
+            width: 150px;
+            height: 150px;
+            /* Ensures the logo scales correctly within its box */
+            object-fit: contain; 
+        }
+        .header-text {
+            margin-left: auto;
+            text-align: right;
+            padding-left: 20px;
+            color: #5d4037; 
+        }
+        .placeholder-text {
+            margin-top: 30px; 
+            text-align: center;
+            color: #555;
+        }
+
+        /* ======= REGISTRATION FORM STYLE ======= */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 70%;
+            margin: 40px auto;
+            background-color: #fff;
+            border: 2px solid #ff9966;
+            border-radius: 6px;
+            padding: 20px 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #1e73be;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .full-width {
+            grid-column: span 2;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+            grid-column: span 2;
+        }
+        .checkbox input {
+            width: auto;
+            margin-right: 10px;
+        }
+        .submit-btn {
+            grid-column: span 2;
+            text-align: right;
+        }
+        button {
+            background-color: #1e73be;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #155b93;
+        }
+.navbar {
+  background-color: #ffe7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 0;
+  border-top: 2px solid rgba(93, 64, 55, 0.15);
+  border-bottom: 2px solid rgba(93, 64, 55, 0.15);
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Individual Button Links */
+.nav-link {
+  text-decoration: none;
+  color: #5d4037;
+  background-color: #f4978e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #f06d63;
+  color: #fff8f0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+	</style>
+</head>
+
+<body>
+<h1 id="header">
+  <img id="logo" src="https://i.ibb.co/PdPQDW9/bakeshop-removebg-preview.png" alt="logo"/>
+  <span class="header-text">Sweet Haven Bakeshop</span>
+  <nav class="navbar">
+  <a href="C:\Users\USER\Downloads\Homepage.html" class="nav-link">🏠 Home</a>
+  <a href="C:\Users\USER\Downloads\Gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="C:\Users\USER\Downloads\Inquiry form.html" class="nav-link">📋 Inquiry Form</a>
+  <a href="C:\Users\USER\Downloads\Registration.html" class="nav-link">🧾 Registration</a>
+  <a href="C:\Users\USER\Downloads\Orders.html" class="nav-link">🛒 Order Now</a>
+</nav>
+</h1>
+
+    <!-- Registration Form Section -->
+    <div class="container">
+        <h2>Registration Form :</h2>
+        <form>
+            <div>
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name" required>
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name" required>
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label>Address Line-1</label>
+                <input type="text" placeholder="Locality/House/Street no" required>
+            </div>
+
+            <div>
+                <label>Address Line-2</label>
+                <input type="text" placeholder="Village/City Name">
+            </div>
+            <div>
+                <label>State</label>
+                <input type="text" placeholder="Enter your state name">
+            </div>
+
+            <div>
+                <label>Country</label>
+                <select>
+                    <option>Philippines</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                    <option>Canada</option>
+                </select>
+            </div>
+            <div>
+                <label>Postal-Code</label>
+                <input type="text" placeholder="Postal Code">
+            </div>
+
+            <div>
+                <label>Gender</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label>Date Of Birth</label>
+                <input type="text" placeholder="dd-mm-yyyy">
+            </div>
+
+            <div>
+                <label>Country code</label>
+                <select>
+                    <option>Philippines (+63)</option>
+                    <option>USA/Canada(+1)</option>
+                    <option>UK (+44)</option>
+                </select>
+            </div>
+            <div>
+                <label>Phone</label>
+                <input type="text" placeholder="Enter Your Contact Number">
+            </div>
+
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" required>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" required>
+                <label>I accept all terms and conditions.</label>
+            </div>
+
+            <div class="submit-btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
