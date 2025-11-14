@@ -325,17 +325,7 @@ form .form-row {
 
 <script>
 const menuItems = [
-    {name: "Pandesal", price: 2.00},
-    {name: "Monay", price: 25.00},
-    {name: "Spanish Bread", price: 40.00},
-    {name: "Ensaymada", price: 60.00},
-    {name: "Pandecoco", price: 70.00},
-    {name: "Cinnamon Roll", price: 65.00},
-    {name: "Crinkles", price: 55.00},
-    {name: "Chocolate Chip Cookies", price: 50.00},
-    {name: "Butter Croissant", price: 70.00},
-    {name: "Matcha Cookies", price: 60.00},
-    // Existing items can be retained below if desired
+    // Cakes (whole-cake prices shown in the image)
     {name: "Tiramisu Cake", price: 899.00},
     {name: "Black Forest Cake", price: 799.00},
     {name: "Ube Cake", price: 699.00},
@@ -343,9 +333,23 @@ const menuItems = [
     {name: "Chocolate Cake", price: 599.00},
     {name: "Yema Cake", price: 699.00},
     {name: "Biscoff Cheesecake", price: 899.00},
-    {name: "Mocha Delight Cupcake", price: 250.00},
-    {name: "Pink Puff Cupcake", price: 320.00},
-    {name: "Salted Caramel Cupcake", price: 250.00}
+
+    // Cupcakes (per-piece prices as shown in the image)
+    {name: "Mocha Delight Cupcake", price: 50.00},
+    {name: "Pink Puff Cupcake", price: 60.00},
+    {name: "Salted Caramel Cupcake", price: 50.00},
+
+    // Pastries / breads (per-piece prices as shown in the image)
+    {name: "Pandesal", price: 2.00},
+    {name: "Monay", price: 10.00},
+    {name: "Spanish Bread", price: 10.00},
+    {name: "Ensaymada", price: 25.00},
+    {name: "Pandecoco", price: 13.00},
+    {name: "Cinnamon Roll", price: 40.00},
+    {name: "Crinkles", price: 10.00},
+    {name: "Chocolate Chip Cookies", price: 30.00},
+    {name: "Butter Croissant", price: 40.00},
+    {name: "Matcha Cookies", price: 30.00}
 ];
 
 const cart = [];
@@ -492,4 +496,3 @@ document.getElementById('checkoutForm').addEventListener('submit', function(e){
 </body>
 
 </html>
-
