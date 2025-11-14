@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sweet Haven Bakeshop</title>
+        <style>
+            /* Load Inter font for better overall presentation if needed, but not strictly necessary for Brush Script */
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+            
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Inter', sans-serif;
+
+                /* 4-COLOR BACKGROUND: Using your provided pastel gradient */
+                background: linear-gradient(
+                    to right,
+                    #ffdab9 0%, #ffdab9 25%, /* Pale Peach */
+                    #fbc4ab 25%, #fbc4ab 50%, /* Lighter Coral */
+                    #f8ad9d 50%, #f8ad9d 75%, /* Medium Coral */
+                    #f4978e 75%, #f4978e 100% /* Darker Coral */
+                );
+                min-height: 100vh;
+            }
+            
+            #header {
+                /* --- FONT: Brush Script MT --- */
+                font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+                /* ------------------------ */
+
+                /* Modern layout using Flexbox for perfect alignment */
+                display: flex;
+                align-items: center; /* Vertically centers the logo and text */
+                justify-content: space-between; /* Pushes logo left, text right */
+                
+                background: #ffe7b2; /* Keeping the pale yellow background for the banner */
+                
+                /* Adjusted font-size to ensure it fits the height */
+                font-size: 75px; 
+                height: 150px;
+                line-height: 1.1; /* Adjust line-height to prevent clipping */
+                margin: 0;
+                padding: 0 20px; /* Padding on the sides */
+                width: 100%;
+                box-sizing: border-box; /* Include padding in the height */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+            
+            #logo {
+                width: 150px;
+                height: 150px;
+                /* Ensures the logo scales correctly within its box */
+                object-fit: contain; 
+            }
+            .header-text {
+                margin-left: auto;
+                text-align: right;
+                padding-left: 20px;
+                color: #5d4037; 
+            }
+            .placeholder-text {
+              
+                margin-top: 30px; 
+                text-align: center;
+                color: #555;
+            }
+
+            /* Additional styles for homepage content */
+            .section {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .section h2 {
+                font-family: 'Brush Script MT', cursive;
+                font-size: 48px;
+                color: #5d4037;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .section p {
+                font-size: 18px;
+                line-height: 1.6;
+                color: #333;
+                text-align: center;
+            }
+            .featured-items {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .item {
+                width: 250px;
+                margin: 20px;
+                text-align: center;
+            }
+            .item img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .item h3 {
+                font-size: 24px;
+                color: #5d4037;
+                margin: 10px 0;
+            }
+            .contact-info {
+                text-align: center;
+            }
+            .contact-info p {
+                margin: 10px 0;
+            }
+.navbar {
+  background-color: #ffe7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 0;
+  border-top: 2px solid rgba(93, 64, 55, 0.15);
+  border-bottom: 2px solid rgba(93, 64, 55, 0.15);
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Individual Button Links */
+.nav-link {
+  text-decoration: none;
+  color: #5d4037;
+  background-color: #f4978e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #f06d63;
+  color: #fff8f0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+	</style>
+</head>
+
+<body>
+<h1 id="header">
+  <img id="logo" src="https://i.ibb.co/PdPQDW9/bakeshop-removebg-preview.png" alt="logo"/>
+  <span class="header-text">Sweet Haven Bakeshop</span>
+  <nav class="navbar">
+  <a href="Index.html" class="nav-link">🏠 Home</a>
+  <a href="Gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="Inquiry form.html" class="nav-link">📋 Inquiry Form</a>
+  <a href="Registration.html" class="nav-link">🧾 Registration</a>
+  <a href="Orders.html" class="nav-link">🛒 Order Now</a>
+</nav>
+</h1>
+        
+        <!-- Welcome Section -->
+        <div class="section">
+            <h2>Welcome to Sweet Haven Bakeshop</h2>
+            <p>Indulge in the finest artisanal baked goods made with love and the freshest ingredients. From decadent cakes to flaky pastries, every bite is a journey to sweetness. Visit us for a delightful experience!</p>
+        </div>
+
+        <!-- Featured Products Section -->
+        <div class="section">
+            <h2>Featured Delights</h2>
+            <div class="featured-items">
+                <div class="item">
+                    <img src="https://richanddelish.com/wp-content/uploads/2023/04/Matildas-Chocolate-Cake.jpg" alt="Chocolate Cake">
+                    <h3>Decadent Chocolate Cake</h3>
+                    <p>Rich, moist, and irresistible – perfect for any celebration.</p>
+                </div>
+                <div class="item">
+                    <img src="https://horizon.com/wp-content/uploads/recipe-cin-roll-hero.jpg" alt="Cinnamon Roll">
+                    <h3>Cinnamon Roll</h3>
+                    <p>Soft sweet dough with cinnamon inside and top with oozing glaze.</p>
+                </div>
+                <div class="item">
+                    <img src="https://www.cookwithkushi.com/wp-content/uploads/2021/09/IMG_0243l.jpg" alt="Croissants">
+                    <h3>Buttery Croissants</h3>
+                    <p>Flaky, golden, and straight from our oven.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="section">
+            <h2>About Us</h2>
+            <p>At Sweet Haven Bakeshop, we believe baking is an art form. Our skilled bakers use traditional techniques and premium ingredients to create treats that bring joy to every occasion. Established in 2025, we've been serving the community with passion and quality.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 123 Bakery Lane, Sweetville, CA 90210</p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Email:</strong> info@sweethavenbakeshop.com</p>
+                <p><strong>Hours:</strong> Mon-Fri: 7am-7pm | Sat-Sun: 8am-5pm</p>
+            </div>
+        </div>
+    </body>
+</html>
+
+
