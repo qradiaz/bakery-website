@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>Sweet Haven Bakeshop</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+            
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Inter', sans-serif;
+                background: linear-gradient(
+                    to right,
+                    #ffdab9 0%, #ffdab9 25%, /* Pale Peach */
+                    #fbc4ab 25%, #fbc4ab 50%, /* Lighter Coral */
+                    #f8ad9d 50%, #f8ad9d 75%, /* Medium Coral */
+                    #f4978e 75%, #f4978e 100% /* Darker Coral */
+                );
+                min-height: 100vh;
+            }
+            
+            #header {
+                font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;                  
+                background: #ffe7b2;
+                font-size: 75px; 
+                height: 150px;
+                line-height: 1.1;
+                margin: 0;
+                padding: 0 20px;
+                width: 100%;
+                box-sizing: border-box;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+            
+            #logo {
+                width: 150px;
+                height: 150px;
+                object-fit: contain; 
+            }
+            .header-text {
+                margin-left: auto;
+                text-align: right;
+                padding-left: 20px;
+                color: #5d4037; 
+            }
+            .menu-title {
+                text-align: center; 
+                font-size: 75px;
+                color: #5d4037;
+                opacity: 0.8;
+                margin: 20px 0;
+            }
+            
+            .translucent-box {
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 15px;
+                padding: 40px;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                margin: 20px auto;
+                max-width: 95%;
+                overflow-x: auto;
+            }
+            
+            .translucent-box table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            }
+            
+            .translucent-box table td {
+                padding: 10px;
+                vertical-align: top; /* Aligns text to the top of the cell */
+            }
+
+            .translucent-box table img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover; 
+                border-radius: 5px;
+            }
+.navbar {
+  background-color: #ffe7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 0;
+  border-top: 2px solid rgba(93, 64, 55, 0.15);
+  border-bottom: 2px solid rgba(93, 64, 55, 0.15);
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Individual Button Links */
+.nav-link {
+  text-decoration: none;
+  color: #5d4037;
+  background-color: #f4978e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #f06d63;
+  color: #fff8f0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+	</style>
+</head>
+
+<body>
+<h1 id="header">
+  <img id="logo" src="https://i.ibb.co/PdPQDW9/bakeshop-removebg-preview.png" alt="logo"/>
+  <span class="header-text">Sweet Haven Bakeshop</span>
+  <nav class="navbar">
+  <a href="home.html" class="nav-link">🏠 Home</a>
+  <a href="gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="inquiry.html" class="nav-link">📋 Inquiry Form</a>
+  <a href="registration.html" class="nav-link">🧾 Registration</a>
+  <a href="order.html" class="nav-link">🛒 Order Now</a>
+</nav>
+</h1>
+                
+        <p class="menu-title">Sweet Haven Menu</p>
+
+<div class="translucent-box">
+    <table>
+        <tbody>
+            <tr>
+                <td><img src="https://saltedmint.com/wp-content/uploads/2024/03/Tiramisu-Cake-2.jpg" alt="Tiramisu-Cake"></td>
+                <td><img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/black_forest_gateau_82303_16x9.jpg" alt="Black Forest Cake"></td>
+                <td><img src="https://theunlikelybaker.com/wp-content/uploads/2016/11/Ube-Cake-Filipino-Purple-Yam-Cake-Feature.jpg" alt="Ube Cake"></td>
+                <td><img src="https://bakewithzoha.com/wp-content/uploads/2024/09/red-velvet-cake-featured-1.jpg" alt="placeholder"></td>
+                <td><img src="https://richanddelish.com/wp-content/uploads/2023/04/Matildas-Chocolate-Cake.jpg" alt="placeholder"></td>
+                <td><img src="https://www.kawalingpinoy.com/wp-content/uploads/2018/07/cheesy-yema-cake-3.jpg" alt="placeholder"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7vmHvpr1MsWqtt5lwTAtHoxNEKhzQRdpa9w&s" alt="placeholder"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUI4CNO8u1DGvVKaNpzz_fXbaU3xaVw0T7og&s" alt="placeholder"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9PiKNkINWp7lx2N4VC_ib_yER_y2Os4hGGQ&s" alt="placeholder"></td>
+                <td><img src="https://www.janespatisserie.com/wp-content/uploads/2024/04/SaltedCaramelCupcakes4-scaled.jpg" alt="placeholder"></td>
+            </tr>
+            <tr>
+                <td>Tiramisu Cake</td>
+                <td>Black Forest Cake</td>
+                <td>Ube Cake</td>
+                <td>Red Velvet Cake</td>
+                <td>Chocolate Cake</td>
+                <td>Yema Cake</td>
+                <td>Biscoff Cheesecake</td>
+                <td>Mocha Delight Cupcake</td>
+                <td>Pink Puff Cupcake</td>
+                <td>Salted Caramel Cupcake</td>
+            </tr>
+            <tr>
+                <td>₱899.00/₱120.00 (per slice)</td>
+                <td>₱799.00/₱100.00 (per slice)</td>
+                <td>₱699.00/₱90.00 (per slice)</td>
+                <td>₱899.00/₱120.00 (per slice)</td>
+                <td>₱599.00/₱90.00 (per slice)</td>
+                <td>₱699.00/₱90.00 (per slice)</td>
+                <td>₱899.00/₱120.00 (per slice)</td>
+                <td>₱50.00/₱250(per box)</td>
+                <td>₱60.00/₱320(per box)</td>
+                <td>₱50.00/₱250(per box)</td>
+            </tr>
+            <tr>
+                <td><img src="https://cdn.bakedbree.com/uploads/2024/06/Pandesal-Recipe-A_BB_Pandesal_Recipe_Feature_1.jpg" alt="Tiramisu-Cake"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2v9lLy6owu7chyJaoCHYCOQVKS4fTMRPCJw&s" alt="Black Forest Cake"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWVlrNsJ2RpWB3Yg9pVjJPOPfiJIKxRynAvg&s" alt="Ube Cake"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF6bUaZFoYqyDNeOnTmT5iWGPMQ4fCWlnQlw&s" alt="placeholder"></td>
+                <td><img src="https://theskinnypot.com/wp-content/uploads/2023/02/pan-de-coco-1.jpg" alt="placeholder"></td>
+                <td><img src="https://horizon.com/wp-content/uploads/recipe-cin-roll-hero.jpg" alt="placeholder"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ34xQO545fGI1tDyAZq3EJb_xDjlM0cv83cg&s" alt="placeholder"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0hz3ja3nBOMsMdzl3Q4oLopdBBaSJZBG7LA&s" alt="placeholder"></td>
+                <td><img src="https://www.cookwithkushi.com/wp-content/uploads/2021/09/IMG_0243l.jpg" alt="placeholder"></td>
+                <td><img src="https://teakandthyme.com/wp-content/uploads/2023/09/matcha-white-chocolate-cookies-DSC_5105-1x1-1200.jpg" alt="placeholder"></td>
+            </tr>
+            <tr>
+                <td>Pandesal</td>
+                <td>Monay</td>
+                <td>Spanish Bread</td>
+                <td>Ensaymada</td>
+                <td>Pan de Coco</td>
+                <td>Cinnamon Roll</td>
+                <td>Crinkles</td>
+                <td>Chocolate Chip Cookies</td>
+                <td>Butter Croissant</td>
+                <td>Matcha Cookies</td>
+            </tr>
+            <tr>
+                <td>₱ 2.00 (per piece)</td>
+                <td>₱ 10.00 (per piece)</td>
+                <td>₱ 10.00 (per piece)</td>
+                <td>₱ 25.00 (per piece)</td>
+                <td>₱ 13.00 (per piece)</td>
+                <td>₱ 40.00 (per piece)</td>
+                <td>₱ 10.00 (per piece)</td>
+                <td>₱ 30.00 (per piece)</td>
+                <td>₱ 40.00(per piece)</td>
+                <td>₱ 30.00(per piece)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    </body>
+</html>
